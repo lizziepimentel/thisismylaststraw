@@ -30,6 +30,7 @@
 <script>
     // Read data from products.json using $.get
     $.get('products.json', function(products) {
+        console.log('Received products:', products);
         // Get the div element to display JSON data
         const productDataDiv = $('#productData');
 
