@@ -1,19 +1,25 @@
-// products.json
-
-[
-  {
-    "id": 1,
-    "name": "Product 1",
-    "price": 19.99
-  },
-  {
-    "id": 2,
-    "name": "Product 2",
-    "price": 29.99
-  },
-  {
-    "id": 3,
-    "name": "Product 3",
-    "price": 39.99
-  }
-]
+{
+    "products": [
+        {
+            "name": "Vintage T-shirt",
+            "description": "Classic vintage t-shirt",
+            "size": "Medium",
+            "price": 25,
+            "categories": ["clothing", "vintage"]
+        },
+        {
+            "name": "Tie-die Grateful Dead T-shirt",
+            "description": "Colorful Grateful Dead t-shirt",
+            "size": "Large",
+            "price": 35,
+            "categories": ["clothing", "vintage", "music"]
+        },
+        {
+            "name": "Smartphone",
+            "description": "High-end smartphone",
+            "brand": "TechX",
+            "price": 500,
+            "categories": ["electronics", "gadgets"]
+        }
+    ]
+}
