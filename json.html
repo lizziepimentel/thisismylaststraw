@@ -1,0 +1,50 @@
+<!-- json2.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <style>
+        /* Add some CSS styling for better presentation */
+        #productData {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Product List</h1>
+
+<!-- Create a div to display JSON data -->
+<div id="productData"></div>
+
+<script>
+    // Read data from products.json using $.get
+    $.get('products.json', function(products) {
+        // Get the div element to display JSON data
+        const productDataDiv = $('#productData');
+
+        // Display JSON data in the div
+        productDataDiv.html('<h2>JSON Data</h2>');
+        
+        // Iterate through the products and add them to the div
+        products.forEach(product => {
+            productDataDiv.append(`<p><strong>ID:</strong> ${product.id}</p>`);
+            productDataDiv.append(`<p><strong>Name:</strong> ${product.name}</p>`);
+            productDataDiv.append(`<p><strong>Price:</strong> $${product.price.toFixed(2)}</p>`);
+            productDataDiv.append('<hr>');
+        });
+    });
+</script>
+
+</body>
+</html>
